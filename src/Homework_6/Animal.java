@@ -9,10 +9,8 @@ public abstract class Animal {
     static int catCount;
     static int dogCount;
 
-    public Animal(String species, int limitOnRunning, int limitOnSwimming) {
+    public Animal(String species) {
         this.species = species;
-        this.limitOnRunning = limitOnRunning;
-        this.limitOnSwimming = limitOnSwimming;
         totalCount++;
     }
 
