@@ -1,5 +1,7 @@
 package Homework_6;
 
+import java.util.Random;
+
 /*1. Создать классы Собака и Кот с наследованием от класса Животное.
   2. Все животные могут бежать и плыть. В качестве параметра каждому методу передается длина препятствия.
      Результатом выполнения действия будет печать в консоль. (Например, dog.run(150); -> 'Бобик пробежал 150 м.');
@@ -8,14 +10,20 @@ package Homework_6;
 
 public class Creation {
 
-    public static void main(String[] args) {
-        Cat cat = new Cat("cat", 200, 0);
-        Dog dog = new Dog("dog", 500, 10);
+    static Random rnd = new Random();
 
-        cat.run(201);
-        cat.swim(0);
-        dog.run(500);
-        dog.swim(11);
+    public static void main(String[] args) {
+
+        Cat cat = new Cat("cat");
+        Dog dog = new Dog("dog");
+        Dog dog2 = new Dog("dog2");
+
+        Animal[] animals = {cat, dog, dog2};
+        for (int i = 0; i < animals.length; i++) {
+            animals[i].run(rnd.nextInt(600));
+            animals[i].swim(rnd.nextInt(20));
+            System.out.println();
+        }
 
         System.out.println("Total amount of animals: " + Animal.totalCount);
         System.out.println("Total amount of cats: " + Cat.catCount);

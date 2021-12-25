@@ -2,8 +2,10 @@ package Homework_6;
 
 public class Cat extends Animal {
 
-    public Cat(String species, int limitOnRunning, int limitOnSwimming) {
-        super(species, limitOnRunning, limitOnSwimming);
+    public Cat(String species) {
+        super(species);
+        this.limitOnRunning = 200;
+        this.limitOnSwimming = 0;
         catCount++;
     }
 
