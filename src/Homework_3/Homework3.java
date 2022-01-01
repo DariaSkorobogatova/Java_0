@@ -2,7 +2,7 @@ package Homework_3;
 
 import java.util.Random;
 
-public class Homework3 {git
+public class Homework3 {
 
     public static Random random = new Random();
 
